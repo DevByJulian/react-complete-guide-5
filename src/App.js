@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Radium from 'radium';
+import Radium, {StyleRoot}  from 'radium';
 import Person from "./components/Person/person";
 
 class App extends Component {
@@ -106,6 +106,7 @@ class App extends Component {
     }
 
     return (
+      <StyleRoot>
       <div className="App">
       <h4>Delete Persons to see dynamic class change</h4>
 
@@ -118,6 +119,7 @@ class App extends Component {
         </button>
         {persons}
       </div>
+      </StyleRoot>
     );
   }
 }
