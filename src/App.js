@@ -85,8 +85,25 @@ class App extends Component {
 
       styles.backgroundColor = 'red'
     }
+
+    let classy = ['pink', 'bold'].join(' ')
+
+    const classes = []
+    if(this.state.persons.length <= 2) {
+      classes.push('red') // classes = ['red']
+    }
+    if(this.state.persons.length <=1 ) {
+      classes.push('bold') // classes = ['red', 'bold']
+    }
+
     return (
       <div className="App">
+      <h4>Delete Persons to see dynamic class change</h4>
+
+      <p className={classes.join(' ')}>Setting Class Names Dynamically</p>
+
+      <p className={classy}>Stay Classy!</p>
+
         <button style={styles} className="m-4" onClick={this.toggleShowHideHandlerMaxWay}>
           {this.state.showHide ? "Hide Persons" : "Show Persons"}
         </button>
