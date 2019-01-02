@@ -58,11 +58,7 @@ class App extends Component {
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
-      cursor: 'pointer',
-      ':hover': {
-        backgroundColor: 'lightgreen',
-        color: 'black'
-      }
+      cursor: 'pointer'
     }
 
     let persons = null;
@@ -88,11 +84,7 @@ class App extends Component {
         </div>
       );
 
-      styles.backgroundColor = 'red';
-      styles[':hover'] = {
-        backgroundColor: 'salmon',
-        color: 'black'
-      }
+      styles.backgroundColor = 'red'
     }
 
     let classy = ['pink', 'bold'].join(' ')
@@ -124,4 +116,4 @@ class App extends Component {
   }
 }
 
-export default Radium(App);
+export default App;
